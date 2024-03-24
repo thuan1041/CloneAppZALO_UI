@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         width: '100%',
-        height: '8%',
+        height: 55,
         alignItems: 'center',
         backgroundColor: '#009AFA',
     },
@@ -45,7 +45,8 @@ export const styles = StyleSheet.create({
 
     txtViewShiled: {
         fontSize: 18,
-        
+        flex: 1,
+        marginLeft: 20
     },
 
     pressShield: {
@@ -54,39 +55,13 @@ export const styles = StyleSheet.create({
         width: '100%',
         backgroundColor: '#FFFFFF',
         flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressPrivacy: {
-        // marginTop: 2,
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressData: {
-        marginTop: 9,
-        height: 70, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
 
     txtViewData: {
         fontSize: 15,
         opacity: 0.8
-    },
-
-    pressRestore: {
-        // marginTop: 2,
-        height: 70, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
     },
 
     line1: {
@@ -104,72 +79,6 @@ export const styles = StyleSheet.create({
 
     line: {
         flexDirection: 'row'
-    },
-
-    pressNoti: {
-        marginTop: 9,
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressMess: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressCall: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressDiary: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressContacts: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressThemes: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressDetail: {
-        marginTop: 9,
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressSupport: {
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
     },
  
     pressSwitchAcc: {
@@ -197,10 +106,5 @@ export const styles = StyleSheet.create({
         width: '85%',
         backgroundColor: '#F1F2F4',
         borderRadius: 25
-
     }
-
-
-
-    
 })

@@ -1,60 +1,66 @@
-import { Dimensions, FlatList, Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, FlatList, Image, Pressable, Text, View } from 'react-native'
 import React from 'react'
 import { styles } from './style'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { StatusBar } from 'react-native';
-// import Carousel from 'react-native-snap-carousel'
+
 
 const {width} = Dimensions.get('screen')
 
 const data = [
   {
     id: 1,
-    // name: 'Nguyen Van A',
-    // phone: '0123456789',
-    img: require('../../../assets/img/test.png')
+    img: require('../../../assets/img/1.jpg')
   },
   {
     id: 2,
-    // name: 'Nguyen Van B',
-    // phone: '0123456789',
-    img: require('../../../assets/img/test.png')
+    img: require('../../../assets/img/2.jpg')
   },
   {
     id: 3,
-    // name: 'Nguyen Van C',
-    // phone: '0123456789',
-    img: require('../../../assets/img/test.png')
+    img: require('../../../assets/img/3.jpg')
+  },
+  {
+    id: 4,
+    img: require('../../../assets/img/4.jpg')
   },
 ]
 
 export const Login = ({navigation}) => {
-  
 
   const renderItem = ({item}) => (
     <View>
       {/* <Text> {item.name} </Text> */}
-      <Image source={item.img} style={{height: 200, width: width}} />
+      <Image source={item.img} style={{height: 330, width: width}} />
     </View>
   )
 
   return (
     <SafeAreaView style={styles.container}>
-      <View >
-        <Text style={styles.txtZaloX}>Zalo X</Text>
+      <View style={{flex: 2}}>
+        <View style={{marginTop: 30, alignItems: 'center', marginBottom: 130}} >
+          <Text style={styles.txtZaloX}>Zalo</Text>
+        </View>
+
+        <FlatList
+          data={data}
+          renderItem={renderItem} 
+          horizontal
+          pagingEnabled
+          snapToAlignment='center'
+          showsHorizontalScrollIndicator={true}
+        ></FlatList>
+
       </View>
 
-      {/* <FlatList
-        data={data}
-        renderItem={renderItem}
-        horizontal
-        pagingEnabled
-        snapToAlignment='center'
-      ></FlatList> */}
+      <View style={{flex: 1}}>  
+        <Pressable style={styles.btnLogin} onPress={()=> { navigation.navigate("LoginPage") }}> 
+          <Text style={styles.txtLogin}> Đăng nhập </Text>
+        </Pressable>  
 
-      <Pressable style={styles.btnLogin} onPress={()=> { navigation.navigate("MainScreen") }}> 
-        <Text style={styles.txtLogin}> Đăng nhập </Text>
-      </Pressable>
+        <Pressable style={[styles.btnLogin, {marginTop: 15, backgroundColor: '#E9EDF8'}]} onPress={()=> { navigation.navigate("RegisterPageL") }}> 
+          <Text style={[styles.txtLogin, {color: 'black'}]}> Tạo tài khoản mới </Text>
+        </Pressable>  
+      </View>
       
     </SafeAreaView>
   )

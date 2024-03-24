@@ -6,12 +6,13 @@ export const styles = StyleSheet.create({
         // justifyContent: 'center',
         // alignItems: 'center'
         backgroundColor: '#009AFA',
+        // backgroundColor: 'red',
     },
 
     header: {
         flexDirection: 'row',
         width: '100%',
-        height: '8%',
+        height: 55,
         alignItems: 'center',
         backgroundColor: '#009AFA',
     },
@@ -45,10 +46,6 @@ export const styles = StyleSheet.create({
         borderRadius: 25,
     },
 
-    viewInfo: {
-        marginLeft: - 120,
-    },
-
     txtViewInfo: {
         fontSize: 15,
         opacity: 0.8,
@@ -57,6 +54,7 @@ export const styles = StyleSheet.create({
     txtViewNameInfo: {
         fontSize: 20,
         fontWeight: '400',
+        marginLeft: 20
     },
 
     btnChangeAcc: {
@@ -69,21 +67,12 @@ export const styles = StyleSheet.create({
     },
 
     pressViewQR: {
-        marginTop: 9,
         height: 70, 
         width: '100%',
         backgroundColor: '#FFFFFF',
         flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    viewQR: {
-        marginLeft: 20,
-    },
-
-    viewCloud: {
-        marginLeft: 20,
-        width: 280
+        alignItems: 'center',
+        justifyContent: 'space-between'
     },
 
     txtViewQR: {
@@ -96,25 +85,7 @@ export const styles = StyleSheet.create({
         marginTop: 5,
     },
 
-    pressMusic: {
-        // marginTop: 2,
-        height: 70, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
     viewMusicTxt: {
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressCloud: {
-        // marginTop: 2,
-        height: 95, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
         flexDirection: 'row',
         alignItems: 'center'
     },
@@ -137,33 +108,6 @@ export const styles = StyleSheet.create({
         backgroundColor: '#F1F2F4',
         borderTopRightRadius: 5,
         borderBottomRightRadius: 5
-    },
-
-    pressData: {
-        marginTop: 9,
-        height: 70, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressShield: {
-        marginTop: 9,
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-
-    pressPrivacy: {
-        // marginTop: 2,
-        height: 55, 
-        width: '100%',
-        backgroundColor: '#FFFFFF',
-        flexDirection: 'row',
-        alignItems: 'center'
     },
 
     btnSetting: {

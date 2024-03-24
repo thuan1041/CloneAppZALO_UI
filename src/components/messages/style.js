@@ -2,18 +2,21 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
     container: {
-      flexDirection:"column",
-      width: "100%",
+      flex: 1,
     },
     // header
     headerWrapper: {
       flexDirection: 'row',
       width: "100%",
-      height:"58px",
-      backgroundColor:"#0091FF",
-      alignItems:"center",
-      position:"fixed",
-      top:0,
+      height: 58,
+      backgroundColor: "#0091FF",
+      alignItems: "center",
+      position: "absolute",
+      top: 0,
+      zIndex: 1,
+    },
+    body: {
+      marginTop: 58,
     },
     icon:{
       color:"white",
@@ -22,7 +25,7 @@ export const styles = StyleSheet.create({
     },
     serachTxt:{
       color:"white",
-      fontSize:"20px",
+      fontSize:20,
       opacity:0.8,
       outlineStyle:"none"
     },
@@ -36,7 +39,8 @@ export const styles = StyleSheet.create({
       padding:10  ,
       borderBottomWidth:1,
       borderColor:"#e3e6e4",
-      backgroundColor:"white"
+      backgroundColor:"white",
+      justifyContent:"space-between"
     },
     lefContainer: {
       flexDirection: 'row',
@@ -48,7 +52,7 @@ export const styles = StyleSheet.create({
       width: 60,
       height: 60,
       borderRadius: 50,
-      marginRight: 15,
+      marginRight: "10%",
     },
     userName: {
       fontWeight: 'bold',
@@ -63,5 +67,12 @@ export const styles = StyleSheet.create({
     time: {
       fontSize: 14,
       color: 'grey',
+      marginTop:"10px",
+      right:"10px",
+      fontWeight:500,
+      color:"black"
+    },
+    timeWrapper:{
+      
     }
 })

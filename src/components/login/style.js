@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
 
     txtZaloX: {
-        fontSize: 35,
+        fontSize: 40,
         fontWeight: 'bold',
         color: '#0471F2'
     },
@@ -21,11 +21,14 @@ export const styles = StyleSheet.create({
         borderRadius: 25,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 100
     }, 
 
     txtLogin: {
-        fontSize: 18,
+        fontSize: 19,
         color: '#FFFFFF',
+        fontWeight: '500'
+
     }
     
     

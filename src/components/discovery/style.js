@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         width: '100%',
-        height: '8%',
+        height: 55,
         alignItems: 'center',
         backgroundColor: '#009AFA',
        
