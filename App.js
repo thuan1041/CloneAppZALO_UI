@@ -130,7 +130,6 @@ const RootStack = () => {
           <Stack.Screen name='ChatMessage' component={ChatMessage}/>
           <Stack.Screen name='ChatMessageOptions' component={ChatMessageOptions}/>
           <Stack.Screen name='QRCodeScanner' component={QRCodeScanner}/>
-
         </>
       ) }
     </Stack.Navigator>
