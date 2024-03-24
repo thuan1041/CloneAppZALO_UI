@@ -1,12 +1,15 @@
 import { ScrollView, SafeAreaView, StyleSheet, Text, View, FlatList, Image, Pressable, TouchableOpacity, TextInput } from 'react-native'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { styles } from './style'
 import moment from "moment";
 import chatRooms from '../../data/chatRooms';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faArrowLeft, faArrowRight, faMagnifyingGlass, faPencil, faSearch, faQrcode,faPlus } from '@fortawesome/free-solid-svg-icons';
+import QRCodeScanner from '../qrCodeScanner/QRCodeScanner';
+
 
 export const Messages = ({ navigation }) => {
+  
   const DATA = chatRooms;
   console.log(DATA);
   const titleScreen = 'Messages';
@@ -19,11 +22,11 @@ export const Messages = ({ navigation }) => {
       }}
     >
       <View style={styles.lefContainer}>
-        <Image
+        {/* <Image
           style={styles.avatar}
           source={require('../../../assets/img/8-anh-dai-dien-trang-inkythuatso-03-15-26-54.jpg')}
-        />
-        {/* <Image style={styles.avatar} source={{ uri: item.users[1].imageUri }} /> */}
+        /> */}
+        <Image style={styles.avatar} source={{ uri: item.users[1].imageUri }} />
         <View style={styles.midContainer}>
           <Text style={styles.userName}>{item.users[1].name}</Text>
           <Text style={styles.lastMessage}>{item.lastMessage.content}</Text>
@@ -46,10 +49,14 @@ export const Messages = ({ navigation }) => {
           <TextInput style={styles.searchTxt} placeholder="Tìm kiếm" />
         </View>
         <View style={styles.actionIconsWrapper}>
-          <Pressable style={styles.iconWrapper}>
+          <Pressable style={styles.iconWrapper} onPress={()=>{
+            navigation.navigate('QRCodeScanner');
+          }}>
             <FontAwesomeIcon size={25} style={styles.icon} icon={faQrcode} />
           </Pressable>
-          <Pressable style={styles.iconWrapper}>
+          <Pressable style={styles.iconWrapper} onPress={()=>{
+            navigation.navigate('QRReader');
+          }}>
             <FontAwesomeIcon size={25} style={[styles.icon, { marginLeft: 10 }]} icon={faPlus} />
           </Pressable>
         </View>

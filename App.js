@@ -24,6 +24,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RegisterPageL } from './src/components/registerPageL/RegisterPageL';
 import ChatMessage from './src/components/chatMessage/ChatMessage';
 import ChatMessageOptions from './src/components/chatMessageOptions/ChatMessageOptions';
+import QRCodeScanner from './src/components/qrCodeScanner/QRCodeScanner';
 
 
 
@@ -109,6 +110,7 @@ const RootStack = () => {
           <Stack.Screen name='RegisterPageL' component={RegisterPageL}/>
           <Stack.Screen name='ChatMessage' component={ChatMessage}/>
           <Stack.Screen name='ChatMessageOptions' component={ChatMessageOptions}/>
+          <Stack.Screen name='QRCodeScanner' component={QRCodeScanner}/>
         </>
       ) : (
         <>
@@ -127,6 +129,8 @@ const RootStack = () => {
           <Stack.Screen name='RegisterPageL' component={RegisterPageL}/>
           <Stack.Screen name='ChatMessage' component={ChatMessage}/>
           <Stack.Screen name='ChatMessageOptions' component={ChatMessageOptions}/>
+          <Stack.Screen name='QRCodeScanner' component={QRCodeScanner}/>
+
         </>
       ) }
     </Stack.Navigator>
