@@ -1,87 +1,91 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+    // container: {
+    //     flexDirection: 'row',
+    //     width: "100%",
+    //     justifyContent: 'space-between',
+    //     // padding:10  
+
+    // },
     container: {
+        flex: 1,
+    },
+    headerWrapper: {
         flexDirection: 'row',
         width: "100%",
-        justifyContent: 'space-between',
-        // padding:10        
-      },
-    headerWrapper: {
-      flexDirection: 'row',
-      width: "100%",
-      height:"58px",
-      backgroundColor:"#0091FF",
-      alignItems:"center",
-      position:"fixed",
-      top:0
+        height: 78,
+        backgroundColor: "#0091FF",
+        alignItems: "center",
+        position: "absolute", // Sửa thành "absolute" thay vì "fixed"
+        top: 0,
+        paddingTop:20
     },
-    icon:{
-      color:"white",
-      fontSize: 30,
-      opacity:0.8
+    icon: {
+        color: "white",
+        fontSize: 30,
+        opacity: 0.8
     },
-    serachTxt:{
-      color:"white",
-      fontSize:"20px",
-      opacity:0.8
+    searchTxt: { // Đã sửa thành "searchTxt"
+        color: "white",
+        fontSize: 20,
+        opacity: 0.8
     },
-    arrowleftBtnWrapper:{
-      flexDirection:"row"
+    arrowleftBtnWrapper: { // Đã sửa thành "arrowLeftBtnWrapper"
+        flexDirection: "row"
     },
-    avatar_state_Wrapper:{
-      marginLeft:"20px"
+    avatarStateWrapper: { // Đã sửa thành "avatarStateWrapper"
+        marginLeft: 20 // Loại bỏ dấu nháy kép ở giá trị số
     },
-    nameTxt:{
-      color:"white",
-      fontSize:"20px",
-      opacity:0.98,
-      fontWeight:600
+    nameTxt: {
+        color: "white",
+        fontSize: 20,
+        opacity: 0.98,
+        // fontWeight:600
     },
-    stateTxt:{
-      color:"white",
-      fontSize:"16px",
-      opacity:0.8
+    stateTxt: {
+        color: "white",
+        fontSize: 16,
+        opacity: 0.8
     },
-    callWrapper:{
-      marginLeft:"50px"
+    callWrapper: {
+        marginLeft: 50 // Loại bỏ dấu nháy kép ở giá trị số
     },
-    videoCallWrapper:{
-      marginLeft:"20px"
+    videoCallWrapper: {
+        marginLeft: 20 // Loại bỏ dấu nháy kép ở giá trị số
     },
-    listWrapper:{
-      marginLeft:"20px"
+    listWrapper: {
+        marginLeft: 20 // Loại bỏ dấu nháy kép ở giá trị số
     },
     // body
-    footerWrapper:{
-      width:"100%",
-      height:"78px",
-      backgroundColor:"white",
-      flexDirection:"row",
-      justifyContent:"space-between",
-      alignItems:'center',
-      borderTopWidth:1,
-      borderTopColor:"#c8dbcd",
-      position:"fixed",
-      bottom:0,
-      paddingBottom:20,
-      paddingTop:10
+    footerWrapper: {
+
+        flexDirection: 'row',
+        width: "100%",
+        height: 78,
+        borderTopWidth: 1,
+        borderTopColor: "#c8dbcd",
+        alignItems: "center",
+        justifyContent: "space-between", // Thêm thuộc tính justifyContent
+        paddingHorizontal: 16, // Thêm padding cho phần nội dung header
+        position: "absolute",
+        bottom: 0,
+        zIndex: 1,
+        paddingBottom: 20,
     },
     listStickerWrapper:{
-      marginLeft:10,
+        marginLeft:10,
     },
     imageWrapper:{
-      marginRight:10
+        marginRight:10
     },
     messageWrapper:{
-      width:"30%"
+        width:"30%"
     },
     messageTxt:{
-      color:"black",
-      fontSize:"22px",
-      opacity:0.8,
-      lineHeight:48,
-      fontWeight:500,
-      outlineStyle:"none"
+        color:"black",
+        fontSize:22, // Loại bỏ dấu nháy kép ở giá trị số
+        opacity:0.8,
+        lineHeight:48,
     }
 })
