@@ -25,6 +25,7 @@ import { RegisterPageL } from './src/components/registerPageL/RegisterPageL';
 import ChatMessage from './src/components/chatMessage/ChatMessage';
 import ChatMessageOptions from './src/components/chatMessageOptions/ChatMessageOptions';
 import QRCodeScanner from './src/components/qrCodeScanner/QRCodeScanner';
+import { ContactFriends } from './src/components/contacts/ContactFriends';
 
 
 
@@ -54,7 +55,7 @@ const MainScreen = () => {
         })} 
         >
         <Tab.Screen name="Messages" component={Messages} options={{tabBarLabel: 'Tin nhắn', tabBarLabelStyle:{fontSize: 12}, tabBarBadge: '3'}}/>
-        <Tab.Screen name="Contacts" component={Contacts} options={{tabBarLabel: 'Danh bạ', tabBarLabelStyle:{fontSize: 12}}}/>
+        <Tab.Screen name="ContactFriends" component={ContactFriends} options={{tabBarLabel: 'Danh bạ', tabBarLabelStyle:{fontSize: 12}}}/>
         <Tab.Screen name="Discovery" component={Discovery} options={{tabBarLabel: 'Khám phá', tabBarLabelStyle:{fontSize: 12}}}/>
         <Tab.Screen name="Timeline" component={Timeline} options={{tabBarLabel: 'Nhật ký', tabBarLabelStyle:{fontSize: 12}}}/>
         <Tab.Screen name="Me" component={Me} options={{tabBarLabel: 'Cá nhân', tabBarLabelStyle:{fontSize: 12}}}/>
@@ -111,12 +112,13 @@ const RootStack = () => {
           <Stack.Screen name='ChatMessage' component={ChatMessage}/>
           <Stack.Screen name='ChatMessageOptions' component={ChatMessageOptions}/>
           <Stack.Screen name='QRCodeScanner' component={QRCodeScanner}/>
+          <Stack.Screen name='ContactFriends' component={ContactFriends}/>
         </>
       ) : (
         <>
-          {/* <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name='LoginPage' component={LoginPage}/>
-          <Stack.Screen name='Setting' component={Setting}/>   */}
+          <Stack.Screen name='Setting' component={Setting}/>  
           <Stack.Screen name='MainScreen' component={MainScreen}/>  
           <Stack.Screen name='AccountAndSecurity' component={AccountAndSecurity}/>
           <Stack.Screen name='Privacy' component={Privacy}/>
@@ -130,6 +132,7 @@ const RootStack = () => {
           <Stack.Screen name='ChatMessage' component={ChatMessage}/>
           <Stack.Screen name='ChatMessageOptions' component={ChatMessageOptions}/>
           <Stack.Screen name='QRCodeScanner' component={QRCodeScanner}/>
+          <Stack.Screen name='ContactFriends' component={ContactFriends}/>
         </>
       ) }
     </Stack.Navigator>

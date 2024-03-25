@@ -20,7 +20,7 @@ export const LoginPage = ({navigation}) => {
   const loginFunc =  async (phoneNumber, password) => {
     try {
       // Gửi yêu cầu POST đến endpoint /auth/login trên máy chủ backend
-      const response = await axios.post(`http://localhost:8080/auth/login`, {
+      const response = await axios.post(`${BACKEND_URL}/auth/login`, {
         phoneNumber: phoneNumber,
         password: password
       });
@@ -35,8 +35,8 @@ export const LoginPage = ({navigation}) => {
 
   const verifyUser = async (id, phoneNumber) => {
     try {
-        const response = await axios.post(`http://localhost:8080/auth/verify`, { id, phoneNumber });
-        // const response = await axios.post(`${BACKEND_LOCALHOST}:8080/auth/verify`, { id, phoneNumber });
+        // const response = await axios.post(`http://localhost:8080/auth/verify`, { id, phoneNumber });
+        const response = await axios.post(`${BACKEND_LOCALHOST}/auth/verify`, { id, phoneNumber });
         return response.data;
     } catch (error) {
         console.error('Error during user verification:', error);

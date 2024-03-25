@@ -11,7 +11,7 @@ import QRCodeScanner from '../qrCodeScanner/QRCodeScanner';
 export const Messages = ({ navigation }) => {
   
   const DATA = chatRooms;
-  console.log(DATA);
+  // console.log(DATA);
   const titleScreen = 'Messages';
 
   const Item = ({ item }) => (

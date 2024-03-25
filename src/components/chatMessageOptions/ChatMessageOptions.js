@@ -3,7 +3,15 @@ import React, {useState} from 'react'
 import { styles } from './style'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faChevronRight, faMagnifyingGlass, faQrcode, faArrowLeft, faLock, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faMagnifyingGlass, faQrcode, faArrowLeft, faLock, faStar, faUser,faWandMagicSparkles, faBell, faPencil
+    ,faClock, 
+    faImage,
+    faUserPlus,
+    faPersonCirclePlus,
+    faUserGroup,
+    faThumbtack,
+    faEyeSlash,
+    faPhoneFlip} from '@fortawesome/free-solid-svg-icons'
 
 function ChatMessageOptions({navigation, route}){
     const {item:item, titleScreen:titleScreen} = route.params;
@@ -38,17 +46,17 @@ function ChatMessageOptions({navigation, route}){
                         <Text style={{}}>tin nhắn</Text>
                     </Pressable>
                     <Pressable style={styles.pressFindMessage}>
-                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faMagnifyingGlass} />
+                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faUser} />
                         <Text style={{}}>Trang</Text>
                         <Text style={{}}>cá nhân</Text>
                     </Pressable>
                     <Pressable style={styles.pressFindMessage}>
-                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faMagnifyingGlass} />
+                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faWandMagicSparkles} />
                         <Text style={{}}>Đổi</Text>
                         <Text style={{}}>hình nền</Text>
                     </Pressable>
                     <Pressable style={styles.pressFindMessage}>
-                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faMagnifyingGlass} />
+                        <FontAwesomeIcon style={{}} color='#000' size={27} icon={faBell} />
                         <Text style={[{},{}]}>Tắt</Text>
                         <Text style={[{},{}]}>thông báo</Text>
                     </Pressable>
@@ -58,7 +66,7 @@ function ChatMessageOptions({navigation, route}){
                     <Text style={styles.txt}>Mã hóa đầu cuối</Text>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faPencil} />
                     <Text style={styles.txt}>Đổi tên gợi nhớ</Text>
                 </Pressable>
                 {/* <Pressable style={styles.encodeEndWrapper}>
@@ -79,7 +87,7 @@ function ChatMessageOptions({navigation, route}){
                     </View>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faClock} />
                     <Text style={styles.txt}>Nhật ký chung</Text>
                 </Pressable>
 
@@ -88,7 +96,7 @@ function ChatMessageOptions({navigation, route}){
                     <Text style={styles.txt}>Ảnh, file, link đã gởi</Text>
                 </Pressable> */}
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faImage} />
                     <Text style={styles.txt}>Ảnh, file, link đã gởi</Text>
                 </Pressable>
 
@@ -104,33 +112,33 @@ function ChatMessageOptions({navigation, route}){
                     </View>
                     
                     {/* Nút "Xem thêm hình ảnh" */}
-                    <Pressable style={styles.viewMoreButton}>
+                    {/* <Pressable style={styles.viewMoreButton}>
                     <Text style={styles.viewMoreText}>Xem thêm hình ảnh</Text>
-                    </Pressable>
+                    </Pressable> */}
                 </View>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faUserPlus} />
                     <Text style={styles.txt}>Tạo nhóm với Trần Minh Thuận</Text>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faPersonCirclePlus} />
                     <Text style={styles.txt}>Thêm Trần Minh Thuận vào nhóm</Text>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faUserGroup} />
                     <Text style={styles.txt}>Xem nhóm chung</Text>
                 </Pressable>
                 
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faThumbtack} />
                     <Text style={styles.txt}>Ghim trò chuyện</Text>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faEyeSlash} />
                     <Text style={styles.txt}>Ẩn trò chuyện</Text>
                 </Pressable>
                 <Pressable style={styles.encodeEndWrapper}>
-                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faLock} />
+                    <FontAwesomeIcon style={{marginLeft: 15}} color='#000' size={27} icon={faPhoneFlip} />
                     <Text style={styles.txt}>Báo cuộc gọi đến</Text>
                 </Pressable>
             </View>

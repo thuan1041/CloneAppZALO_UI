@@ -6,7 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 export const Contacts = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View >
+      <View>
         <Text>Contacts</Text>
       </View>
     </SafeAreaView>

@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { styles } from './style'
+import { socket } from '../../config/io';
+
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
-  const [text, setText] = useState('Hướng camera về phía mã QR')
-
+  const [text, setText] = useState('Hướng camera về phía mã QR');
+  const [isConnected, setIsConnected] = useState(false);
   const askForCameraPermission = () => {
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
@@ -16,14 +18,32 @@ export default function App() {
 
   // Yêu cầu quyền sử dụng máy ảnh
   useEffect(() => {
+    socket.then((socket) => {
+      socket.emit('setup');
+      socket.on('connected', () => {
+        console.log('Socket connected');
+        setIsConnected(true);
+      })
+    })
     askForCameraPermission();
   }, []);
 
   // What happens when we scan the bar code
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    setText(data)
-    console.log('Type: ' + type + '\nData: ' + data)
+    setText(data);
+    socket.then((socket) => {
+      socket.emit('join-qr-room', data);
+      socket.on('joined', room => {
+        console.log('Joined room:', room);
+        socket.emit('scan-success', {
+          phoneNumber: '0935201508',
+          id: 1,
+          avatar: 'https://i.pinimg.com/236x/76/18/38/761838420398ec0b0b412b46b71f2ab2.jpg',
+          room: room
+        })
+      });
+    })
   };
 
   // Check permissions and return the screens

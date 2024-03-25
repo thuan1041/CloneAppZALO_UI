@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center'
-        backgroundColor: '#009AFA',
+        backgroundColor: '#ffffff',
     },
 
     header: {
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
     
     body: {
         flex: 1,
-        backgroundColor: '#F4F5F7',
+        // backgroundColor: '#F4F5F7',
     },
 
     pressZaloVideo: {
@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         height: 70,
         width: '100%',
-        backgroundColor: '#FFFFFF',
+        // backgroundColor: '#FFFFFF',
         justifyContent: 'space-between',
     },
     avtWrapper:{
@@ -43,10 +43,10 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         height: 70,
         width: '100%',
-        backgroundColor: '#FFFFFF',
+        // backgroundColor: '#FFFFFF',
         justifyContent: 'space-between',
-        borderBottomWidth: 1,
-        borderBottomColor: '#F4F5F7',
+        // borderBottomWidth: 1,
+        // borderBottomColor: '#F4F5F7',
         paddingLeft: 15,
         marginTop: 15,
         marginBottom: 15,
@@ -55,8 +55,8 @@ export const styles = StyleSheet.create({
         height: 80,
         width: 80,
         borderRadius: 50,
-        borderBlockColor:'#009AFA',
-        borderWidth: 2,
+        // borderBlockColor:'#009AFA',
+        // borderWidth: 2,
         alignItems:'center',
     },
     OptionsAbove:{
@@ -88,14 +88,14 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
         height: 70,
         width: '100%',
-        backgroundColor: '#FFFFFF',
-        borderBottomWidth: 1,
-        borderBottomColor: '#F4F5F7',
+        // backgroundColor: '#FFFFFF',
+        // borderBottomWidth: 1,
+        // borderBottomColor: '#F4F5F7',
         paddingLeft: 15,
         paddingRight: 15,
     },
     img:{
-        height: 40,
-        width: 40,
+        height: 60,
+        width: 60,
     }
 })
